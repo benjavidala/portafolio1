@@ -1,10 +1,51 @@
+                                    /* RESET CSS */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+                                   /* BODY */
+}
 body{
+
     background-color: #151313;
+    font-family: arial, sans-serif;
+
+    color:white;
 }
 
 
                                     /* Menu de navegacion */
 
 /* Menu de navegacion class(menu) */
+/*Centro menu de navegacion*/
 
+/* Alinear los elementos del menu de navegacion en una fila y centrarlos */
+.nav
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0;
 
+}
+/* separar los elementos del menu de navegacion con un espacio de 50px */
+.nav-list {
+    display: flex;
+    gap : 70px;
+
+}
+.nav-icon
+{
+    width: 25px;
+    height: 25px;
+}
+
+/*Arreglo icono tecnologia */
+.nav-icon--large { 
+    width: 28px;
+    height: 28px;
+    margin-top: -2px;
+    
+}
