@@ -12,7 +12,7 @@ body{
     background-color: #151313;
     font-family: arial, sans-serif;
 
-    color:white;
+    list-style: none;
 }
 
 
@@ -33,19 +33,43 @@ body{
 /* separar los elementos del menu de navegacion con un espacio de 50px */
 .nav-list {
     display: flex;
+    align-items: center;
     gap : 70px;
+    list-style: none;
 
 }
 .nav-icon
 {
     width: 25px;
     height: 25px;
+    
 }
 
-/*Arreglo icono tecnologia */
+/*Arreglo icono tecnologia, Clase icono diferente tecnologia, agranda icono y se alinea con margin */
 .nav-icon--large { 
-    width: 28px;
-    height: 28px;
-    margin-top: -2px;
+    width: 26px;
+    height: 30px;
+    margin-top: 0px;
+
     
+}
+
+/* Contorno circular iconos del menu de navegacion */
+.nav-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 48px;
+    width: 54px;
+
+    background-color: #282626;
+    border-radius: 46%;
+    
+    
+ }
+
+.nav-button:hover{
+    background-color: #3C3A3A;
+    transition: 0.3s;
 }
