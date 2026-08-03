@@ -7,6 +7,13 @@
                                    /* VARIABLES */
                                    /* BODY */
 }
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+
+}
 body{
 
     background-color: #151313;
@@ -29,7 +36,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 25px 0;
     
 
 }
@@ -83,7 +89,7 @@ body{
 .hero {
     color: #e4e4e4;
     display: flex;
-    padding: 100px ;
+    padding: 10%;
     
     
     
@@ -91,7 +97,7 @@ body{
 /*  HERO left posicionamiento*/
 .hero-left {
     display: flex;
-    margin-left: 17%;
+    margin-left: 14%;
     
     
 }
@@ -196,7 +202,7 @@ body{
     height: 350px;
     width: 600px;
     padding: 20px;
-    margin-left: 13%;
+    margin-left: 14%;
 }
 
 .about-title {
@@ -218,9 +224,13 @@ body{
 .footer {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     background-color: #151313;
-    padding: 20px;
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    padding: 2%;
+    width: 100%;   
+    
 
 }
 
