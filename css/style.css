@@ -4,19 +4,21 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-
+                                   /* VARIABLES */
                                    /* BODY */
 }
 body{
 
     background-color: #151313;
-    font-family: arial, sans-serif;
+    font-family: "inter", sans-serif;
 
     list-style: none;
 }
 
+                         /* HEADER */
 
-                                    /* Menu de navegacion */
+                         /* NAVBAR */
+ /* Menu de navegacion */
 
 /* Menu de navegacion class(menu) */
 /*Centro menu de navegacion*/
@@ -28,6 +30,7 @@ body{
     justify-content: center;
     align-items: center;
     padding: 25px 0;
+    
 
 }
 /* separar los elementos del menu de navegacion con un espacio de 50px */
@@ -38,27 +41,29 @@ body{
     list-style: none;
 
 }
-.nav-icon
-{
+.nav-icon{
+    display: flex;
     width: 25px;
     height: 25px;
+    margin-top: 10px;
     
 }
 
 /*Arreglo icono tecnologia, Clase icono diferente tecnologia, agranda icono y se alinea con margin */
 .nav-icon--large { 
+    display: flex;
     width: 26px;
     height: 30px;
-    margin-top: 0px;
+    margin-top: 8px;
 
     
 }
 
 /* Contorno circular iconos del menu de navegacion */
 .nav-button {
-    display: inline-flex;
+    display: flex;
     justify-content: center;
-    align-items: center;
+    
 
     height: 48px;
     width: 54px;
@@ -73,3 +78,170 @@ body{
     background-color: #3C3A3A;
     transition: 0.3s;
 }
+
+ /* HERO */
+.hero {
+    color: #e4e4e4;
+    display: flex;
+    padding: 100px ;
+    
+    
+    
+} 
+/*  HERO left posicionamiento*/
+.hero-left {
+    display: flex;
+    margin-left: 17%;
+    
+    
+}
+.hero-block{
+    display:flex;
+    flex-direction:column;
+    position: absolute;
+}
+
+.hero-hi{
+    font-size: 30px;
+    font-weight: 200;
+    
+
+    
+}
+.hero-name {
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+    
+}
+.hero-name-first{
+    
+    font-size: 100px;
+    font-weight: 700;
+    
+    
+    
+}
+.hero-name-last{
+    font-size: 80px;
+    font-weight: 500;
+     
+}
+
+.hero-roles{
+    display: flex;
+    list-style: none;
+    font-weight: 400;
+    margin-top: 33%;
+    margin-left: 50%;
+    width: 400px;
+    height: 200px;
+
+}
+
+.hero-role--engineer{
+    color: #CAC9C9;
+    font-size: 34px;
+    font-weight: 400;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+
+    margin-left: 4%;
+    margin-bottom: 10%;    
+    
+}
+.hero-role--backend{
+    color: #B0B0B0;
+    font-size: 26px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20%;
+    
+}
+.hero-role--python{
+    color: #989696;
+    font-size: 32px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    margin-top: 28%;
+    margin-left: 3%;
+}
+.hero-role--qa{
+    color: #7F7E7E;
+    font-size: 28px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    margin-top: 19%;
+    margin-left: 5%;
+    
+}
+
+
+
+/*ABOOOOOUT*/
+
+.hero-right{
+    /* Borde */
+    display: flex;
+    flex-direction: column;
+    border: 2px solid;
+    border-radius: 2%; 
+    height: 350px;
+    width: 600px;
+    padding: 20px;
+    margin-left: 13%;
+}
+
+.about-title {
+    font-size: 60px;
+    font-weight: 100;
+    color: #CAC9C9;
+}
+
+.about-text {
+    padding-top: 20px;
+    font-size: 22px;
+    font-weight: 100;
+    color: #CAC9C9;
+}
+
+/*FOOOOTER*/
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: #151313;
+    padding: 20px;
+
+}
+
+.footer-icon {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+.footer-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+/* TECHNOLOGIES */
+
+/* PROJECTS */
+
+/* FOOTER */
+
+/* ANIMATIONS */
+
+/* MEDIA QUERIES */

@@ -1,63 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
+    <!--LINK Fuentes texto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta
+        name="description"
+        content="Portafolio de Benjamin Vidal, Ingeniero en Informática especializado en Backend, Python y Testing QA.">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benjamin Vidal</title>
+    <title>Benjamin Vidal | Backend Developer</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <!-- Menu de navegacion -->
-        <nav class="nav">
-            <ul class="nav-list">
-                <!-- Menu de inicio -->
-                    <li>
+        
+            <nav class="nav" aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <!-- Menu de inicio -->
+                        <li>
+                        
+                            <a class="nav-button" href="#home">
+                            <img class= "nav-icon" src="img/inicio.png" alt="Inicio">
+                            </a>
+                            
+                        </li>
+
+                    <!-- Menu de tecnologias -->
+                        <li >
+                            <a class="nav-button" href="#technologies">
+                            <img class= "nav-icon nav-icon--large" src="img/tecnologias.png" alt="Tecnologias">
+                            </a>
+                            
+                        </li>
+
                     
-                        <a class="nav-button" href="#home">
-                        <img class= "nav-icon" src="img/inicio.png" alt="Inicio">
-                        </a>
-                        
-                    </li>
-
-                <!-- Menu de tecnologias -->
-                    <li >
-                        <a class="nav-button" href="#technologies">
-                        <img class= "nav-icon nav-icon--large" src="img/tecnologias.png" alt="Tecnologias">
-                        </a>
-                        
-                    </li>
-
-                
-                
-                <!-- Menu de proyectos -->
-                    <li>
-                        
-                        <a class="nav-button" href="#projects">
-                        <img class= "nav-icon" src="img/proyectos.png" alt="Proyectos">
-                        </a>
-                        
-                    </li>
-                <!-- Menu de escribeme -->
-                    <li>
-                        
-                        <a class="nav-button" href="#contact">
-                        <img  class= "nav-icon" src="img/escribeme.png" alt="Escribeme">
-                        </a>
-                        
-                    </li>
-            </ul>
-        </nav>
+                    
+                    <!-- Menu de proyectos -->
+                        <li>
+                            
+                            <a class="nav-button" href="#projects">
+                            <img class= "nav-icon" src="img/proyectos.png" alt="Proyectos">
+                            </a>
+                            
+                        </li>
+                    <!-- Menu de escribeme -->
+                        <li>
+                            
+                            <a class="nav-button" href="#contact">
+                            <img  class= "nav-icon" src="img/escribeme.png" alt="Escribeme">
+                            </a>
+                            
+                        </li>
+                </ul>
+            </nav>
+        
     </header>
     <main>
-
-        <section id = "home"></section>
-        <section id = "technologies"></section>
-        <section id = "projects"></section>
-        <section id  = "contact"></section>
+        <!-- SECCION HOME -->
+        <section id="home" class="hero">
+                <div class="hero-left">
+                    
+                        <div class="hero-block">
+                            <p class="hero-hi">Hola, soy</p>
+                            <h1 class="hero-name">
+                                <span class="hero-name-first">Benjamin</span>
+                                <span class="hero-name-last">Vidal</span>
+                            </h1>
+                        </div>
+                        <ul class="hero-roles">
+                            <li class="hero-role hero-role--backend">
+                                
+                                <span>Backend</span>
+                                <span>Developer</span>
+                            </li>
+                            <li class="hero-role hero-role--engineer">
+                                
+                                <span>Ingeniero</span>
+                                <span>En Informatica</span>
+                            
+                            </li>
+                            <li class="hero-role hero-role--python">
+                                <span>Python</span>
+                                <span>Developer</span>
+                            </li>
+                            <li class="hero-role hero-role--qa">
+                                <span>Testing</span>
+                                <span>QA</span>
+                            </li>
+                        </ul>
+                    
+                </div>
+                <section class="hero-right">
+                    <!--- SOBRE MI --->
+                    <h2 class="about-title">Sobre mi</h2>
+                    <p class="about-text">Backend Developer con interés en Python y Testing QA. 
+                    Responsable, analítico y orientado al detalle. 
+                    Disfruto  comprender los problemas en profundidad, 
+                    Diseñar  soluciones antes de implementarlas y fortalecerlas
+                    mediante la colaboración y diferentes puntos de vista.
+                    </p>
+                </section>    
+                
+            </section>
+        <section id = "technologies" class="home-section"></section>
+        <section id = "projects" class="home-section"></section>
+        <section id  = "contact" class="home-section"></section>
     </main>
-    <footer>
-
+    <footer class="footer">
+        <nav class= "nav-footer" aria-label="Redes sociales">
+            <ul class="footer-icon">
+                <li>
+                    <a href="https://drive.google.com/file/d/1RHU1OCzJePOCpgIsMqjjTRIitFOLrrXP/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    <img class="footer-icon-cv" src="img/cv.png" alt="Curriculum Vitae">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/benjavidala" target="_blank" rel="noopener noreferrer">
+                        <img class="footer-icon-github" src="img/github.png" alt="Github">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/benjaminvidala/" target="_blank" rel="noopener noreferrer">
+                        <img class="footer-icon-linkedin" src="img/linkedin.png" alt="Linkedin">
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </footer>
 </body>
 </html>
