@@ -90,33 +90,38 @@ body{
     color: #e4e4e4;
     display: flex;
     padding: 10%;
+    flex-wrap: wrap;
+    gap: 4rem;
+    padding:8% 8%;
+    align-items: stretch;
     
     
     
 } 
 /*  HERO left posicionamiento*/
 .hero-left {
-    display: flex;
-    margin-left: 14%;
+    position:relative;
+    flex: 1 1 500px;
+    min-height: 420px;
+    left:15%
     
     
 }
 .hero-block{
-    display:flex;
-    flex-direction:column;
-    position: absolute;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-hi{
-    font-size: 30px;
+    font-size: clamp(1.1rem,2vw,1.875rem);
     font-weight: 200;
-    
-
+    margin-left: 1%;
     
 }
 .hero-name {
     display: flex;
     flex-direction: column;
+    line-height: 1;
     
     
     
@@ -124,70 +129,71 @@ body{
 }
 .hero-name-first{
     
-    font-size: 100px;
-    font-weight: 700;
+    font-size: clamp(2.5rem, 8vw, 6.25rem);
+    font-weight: 500;
     
     
     
 }
 .hero-name-last{
-    font-size: 80px;
+    font-size: clamp(2rem,6vw,5rem);
     font-weight: 500;
+    margin-left: 0.9%;
+    
      
 }
 
 .hero-roles{
-    display: flex;
+    position: absolute;
+    inset: 0;
     list-style: none;
-    font-weight: 400;
-    margin-top: 33%;
-    margin-left: 50%;
-    width: 400px;
-    height: 200px;
+    z-index:1;
 
+}
+.hero-role{
+    position: absolute;
+    list-style: none;
+    z-index: 1;
+    display:flex;
+    flex-direction: column;
+    line-height: 1.1;
 }
 
 .hero-role--engineer{
     color: #CAC9C9;
-    font-size: 34px;
+    font-size: clamp(0.9rem, 2.2vw, 1.9rem);
     font-weight: 400;
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-
-    margin-left: 4%;
-    margin-bottom: 10%;    
-    
+    top: 29%;
+    left: 33.7%; 
 }
 .hero-role--backend{
     color: #B0B0B0;
-    font-size: 26px;
+    font-size: clamp(0.9rem,2vw,1.75rem);
     font-weight: 400;
-    display: flex;
-    flex-direction: column;
-    margin-top: 20%;
-    
+    top: 44%;
+    left: 25%;
 }
 .hero-role--python{
     color: #989696;
-    font-size: 32px;
+    font-size: clamp(1rem, 2.6vw, 2rem);
     font-weight: 400;
-    display: flex;
-    flex-direction: column;
-    height: 100px;
-    margin-top: 28%;
-    margin-left: 3%;
+    top: 53%;
+    left: 43%;
 }
 .hero-role--qa{
     color: #7F7E7E;
-    font-size: 28px;
-    font-weight: 400;
-    display: flex;
-    flex-direction: column;
-    margin-top: 19%;
-    margin-left: 5%;
+    font-size: clamp(0.9rem, 2vw, 1.75rem);
+    top: 45%;
+    left: 58%;
     
 }
+.hero-role--eslogan {
+    color:#686767;
+    font-size: clamp(0.4rem,1vw,0.8rem);
+    top: 47%;
+    left: 41.5%;
+}
+
 
 
 
@@ -199,22 +205,24 @@ body{
     flex-direction: column;
     border: 2px solid;
     border-radius: 2%; 
-    height: 350px;
-    width: 600px;
+    width: 46%;
+    height: 1%;
     padding: 20px;
-    margin-left: 14%;
+    margin-top: 0.8%;
+
+    
+    
 }
 
 .about-title {
-    font-size: 60px;
+    font-size: clamp(2rem,6vw,3.8rem);
     font-weight: 100;
     color: #CAC9C9;
 }
 
 .about-text {
     padding-top: 20px;
-    font-size: 22px;
-    font-weight: 100;
+    font-size: clamp(0.8rem,1.6vw,1.4rem);
     color: #CAC9C9;
 }
 
@@ -222,16 +230,11 @@ body{
 
 
 .footer {
-    display: flex;
-    flex-direction: column;
-    background-color: #151313;
-    position:fixed;
-    bottom: 0;
-    left: 0;
-    padding: 2%;
-    width: 100%;   
-    
-
+  display: flex;
+  flex-direction: column;
+  background-color: #151313;
+  padding: 2%;
+  width: 100%;
 }
 
 .footer-icon {
@@ -255,3 +258,71 @@ body{
 /* ANIMATIONS */
 
 /* MEDIA QUERIES */
+/* Tablet y móvil grande */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 10% 6%;
+    }
+
+    .hero-left {
+        left: 0;              /* anulamos el desplazamiento manual de desktop */
+        width: 100%;
+        min-height: 340px;
+    }
+
+    .hero-right {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .nav-list {
+        gap: clamp(20px, 5vw, 70px);
+    }
+}
+
+/* Móvil chico: el overlap ya no es legible, lo desactivamos */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10% 6%;
+    }
+
+    .hero-left {
+        left: 0;
+        width: 100%;
+        min-height: auto;   /* ya no forzamos altura, el contenido la define */
+    }
+
+    /* Los roles vuelven al flujo normal, sin overlap */
+    .hero-roles {
+        position: static;
+        inset: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+        margin-top: 1.5rem;
+    }
+
+    .hero-role {
+        position: static;
+        align-items: center;
+    }
+
+    .hero-right {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .nav-list {
+        gap: clamp(20px, 5vw, 70px);
+    }
+
+    .hero-name-first,
+    .hero-name-last {
+        font-size: clamp(2.2rem, 12vw, 3.5rem);
+    }
+}
