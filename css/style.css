@@ -225,9 +225,11 @@ body{
     font-size: clamp(0.8rem,1.6vw,1.4rem);
     color: #CAC9C9;
 }
+/* TECHNOLOGIES */
 
-/*FOOOOTER*/
+/* PROJECTS */
 
+/* FOOTER */
 
 .footer {
   display: flex;
@@ -249,80 +251,53 @@ body{
     height: 40px;
 }
 
-/* TECHNOLOGIES */
-
-/* PROJECTS */
-
-/* FOOTER */
-
 /* ANIMATIONS */
 
 /* MEDIA QUERIES */
 /* Tablet y móvil grande */
-@media (max-width: 768px) {
+@media (max-width:1243px) {
     .hero {
-        flex-direction: column;
-        padding: 10% 6%;
+        display: grid;
+        grid-template-columns: 1fr 1.6fr 1fr;
+        grid-template-areas:
+            "engineer name    python"
+            "backend  eslogan qa"
+            "about    about   about";
+        row-gap: 1.5rem;
+        column-gap: 0.5rem;
+        align-items: start;
+        padding: 8% 4%;
     }
 
-    .hero-left {
-        left: 0;              /* anulamos el desplazamiento manual de desktop */
-        width: 100%;
-        min-height: 340px;
-    }
-
-    .hero-right {
-        width: 100%;
-        margin-top: 2rem;
-    }
-
-    .nav-list {
-        gap: clamp(20px, 5vw, 70px);
-    }
-}
-
-/* Móvil chico: el overlap ya no es legible, lo desactivamos */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 10% 6%;
-    }
-
-    .hero-left {
-        left: 0;
-        width: 100%;
-        min-height: auto;   /* ya no forzamos altura, el contenido la define */
-    }
-
-    /* Los roles vuelven al flujo normal, sin overlap */
-    .hero-roles {
-        position: static;
-        inset: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.8rem;
-        margin-top: 1.5rem;
-    }
-
+    /* Anulamos el modo overlap de desktop */
+    .hero-left,
+    .hero-roles,
     .hero-role {
         position: static;
-        align-items: center;
+        inset: auto;
+        left: auto;
+        top: auto;
     }
+
+    .hero-block {
+        grid-area: name;
+        text-align: center;
+    }
+
+    .hero-role--engineer { grid-area: engineer; text-align: right; }
+    .hero-role--backend  { grid-area: backend;  text-align: right; }
+    .hero-role--python   { grid-area: python;   text-align: left; }
+    .hero-role--qa       { grid-area: qa;       text-align: left; }
+    .hero-role--eslogan  { grid-area: eslogan;  text-align: center; }
 
     .hero-right {
+        grid-area: about;
         width: 100%;
-        margin-top: 2rem;
-    }
-
-    .nav-list {
-        gap: clamp(20px, 5vw, 70px);
+        margin-top: 0;
     }
 
     .hero-name-first,
     .hero-name-last {
-        font-size: clamp(2.2rem, 12vw, 3.5rem);
+        font-size: clamp(2rem, 9vw, 3rem);
     }
 }
